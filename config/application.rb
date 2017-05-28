@@ -30,6 +30,11 @@ module ImearsServer
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+
+    # To protect our API from DDoS, brute force attacks, hammering, or even to
+    # monetize with paid usage limits
+    config.middleware.use Rack::Attack
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'

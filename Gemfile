@@ -5,15 +5,18 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
-
+# Protect our API from DDoS, brute force attacks, hammering, or even
+# to monetize with paid usage limits
+gem 'rack-attack'
 
 # Fortunately AMS (Active Model Serializers) is here to save the day.
 # AMS provides a clean layer between the model and the controller
