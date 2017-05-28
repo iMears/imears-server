@@ -12,6 +12,15 @@ gem 'rails', '~> 5.1.1'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+
+
+
+# Fortunately AMS (Active Model Serializers) is here to save the day.
+# AMS provides a clean layer between the model and the controller
+# that lets us to call to_json or as_json on the ActiveRecord object
+# or collection as normal, while outputing our desired API format.
+gem 'active_model_serializers'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
