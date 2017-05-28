@@ -15,3 +15,16 @@
 
 .byebug_history
 .env
+
+# Dev Machines
+.DS_Store
+*/.DS_Store
+
+Procfile.dev
+.env
+.env.development
+.env.test
+.env.staging
+.env.production
+
+/*.sublime-workspace
