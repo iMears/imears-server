@@ -4,6 +4,7 @@ module Api::V1
 
     # GET /users
     def index
+      puts 'hello from index!!!!'
       @users = User.all
 
       render json: @users
