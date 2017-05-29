@@ -1,24 +1,41 @@
-# README
+# imears-server [![CircleCI](https://circleci.com/gh/iMears/imears-server.svg?style=svg)](https://circleci.com/gh/iMears/imears-server)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was generated using the Rails `--api` flag and therefore is a JSON API only.
 
-Things you may want to cover:
+### Getting started
 
-* Ruby version
+You’ll need to have Ruby >= 2.2.0 on your machine.
+You can use rvm to easily switch Ruby versions between different projects.
 
-* System dependencies
 
-* Configuration
+### Installing
 
-* Database creation
+```bash
+  git clone git@github.com:iMears/imears-server.git
+  cd imears-server
+  bundle install
+```
 
-* Database initialization
 
-* How to run the test suite
+### Setup Database
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+  rake db:create
+  rake db:migrate
+```
 
-* Deployment instructions
+### Starting Rails server
 
-* ...
+```bash
+  rails server
+```
+
+- http://localhost:3000/v1/ endpoints should now respond with JSON when api_key is valid.
+
+
+### Running tests
+
+```bash
+  rspec spec
+```
+
