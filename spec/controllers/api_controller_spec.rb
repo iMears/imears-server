@@ -25,11 +25,17 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::ApiController, type: :controller do
 
+  describe 'it passes a simple test' do
+    it 'returns true' do
+      expect(1 + 1).to eq(2)
+    end
+  end
+
   # # This should return the minimal set of attributes required to create a valid
   # # User. As you add validations to User, be sure to
   # # adjust the attributes here as well.
   # let(:valid_attributes) {
-  #   skip("Add a hash of attributes valid for your model")
+  #   skip(name: 'Bruce Wayne', emial: 'thedark@knight.com')
   # }
 
   # let(:invalid_attributes) {
@@ -40,12 +46,6 @@ RSpec.describe Api::V1::ApiController, type: :controller do
   # # in order to pass any filters (e.g. authentication) defined in
   # # UsersController. Be sure to keep this updated too.
   # let(:valid_session) { {} }
-
-  describe 'it passes a test for fun' do
-    it 'is true' do
-      expect(1 + 1).to eq(2)
-    end
-  end
 
   # describe "GET #index" do
   #   it "returns a success response" do
